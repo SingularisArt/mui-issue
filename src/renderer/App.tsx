@@ -1,40 +1,26 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
+import { ImStatsBars } from "react-icons/im";
+import Button from "../components/Button";
+
 import './App.css';
 
 function Hello() {
   return (
     <div>
-      <div className="Hello">
-        <img width="200" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
-          </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
-      </div>
+      <Button icon={<ImStatsBars />} className="stats-button" text="Stats" />
+      <div style={{ paddingRight: "10px" }}></div>
+      <Button
+        icon={<ImStatsBars />}
+        text="Stats"
+        style={{
+          paddingTop: "1em",
+          paddingBottom: "1em",
+          paddingRight: "1.5em",
+          paddingLeft: "1.5em",
+          backgroundColor: "#000",
+          color: "#0ff",
+        }}
+      />
     </div>
   );
 }
